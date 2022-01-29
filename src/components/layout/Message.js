@@ -14,6 +14,7 @@ function Message({ type, msg }){
 
         setVisible(true)
         //console.log('true message')
+        //console.log(msg)
 
         const timer = setTimeout(() => {
             setVisible(false)

@@ -9,10 +9,10 @@ function ProjectCard(props){
     //console.log({category})
 
     const remove = (e) => {
-        //console.log(e)        
-        //props.handleRemove(props.id)
+        //console.log('removendo...')        
+        props.handleRemove(props.id)
         e.preventDefault()
-        console.log('teste')
+        //console.log('teste')
         //e.stopPropagation();
         //e.nativeEvent.stopImmediatePropagation();
     }
@@ -27,7 +27,7 @@ function ProjectCard(props){
                 <span className={`${styles[props.category.toLowerCase()]}`}></span> {props.category}
             </p>
             <div className={styles.project_card_actions}>
-                <Link to="/">
+                <Link to={`/project/${props.id}`}>
                    <BsPencil/> Editar 
                 </Link>
                 <button onClick={remove}>
